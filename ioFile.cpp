@@ -19,7 +19,7 @@ int main()
     {
         cout << "- ";
         // mendapatkan setiap karakter dalam satu baris
-        gateline(cin, baris);
+        getline(cin, baris);
         //loop akan berhenti jika anda memasukan karakter q
         if (baris == "q")
             break;
@@ -34,5 +34,22 @@ int main()
     // membuka file
     infile.open("contohfile.txt");
 
-    
+    cout << endl
+        << ">= Membuka dan membaca file " << endl;
+    //jika file ada maka
+    if(infile.is_open())
+    {
+        //melakukan perulangan setiap baris
+        while (getline(infile, baris))
+        {
+            // dan tampilkan di sini
+            cout << baris << '\n';
+        }
+        //tutup file tersebut setelah selesai
+        infile.close();
+    }
+    //jika tidak ditemukan file maka akan menampilkan ini
+    else
+        cout << "Unable to open file";
+    return 0;
 }
