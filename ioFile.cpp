@@ -8,7 +8,7 @@ int main()
     string baris;
 
     // membuat obyek output file stream dalam mode menulis. 
-    ofstream output;
+    ofstream outfile;
     // membuka file
     outfile.open("contohfile.txt");
 
@@ -27,7 +27,7 @@ int main()
         outfile << baris << endl;
     }
     //selesai dalam menulis sekarang tutup filenya
-    outfile.clode();
+    outfile.close();
 
     // membuat obyek input file
     ifstream infile;
