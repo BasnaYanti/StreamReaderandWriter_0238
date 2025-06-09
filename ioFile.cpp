@@ -29,10 +29,10 @@ int main()
     //selesai dalam menulis sekarang tutup filenya
     outfile.clode();
 
-    // membuat obyek input fille
+    // membuat obyek input file
     ifstream infile;
     // membuka file
     infile.open("contohfile.txt");
 
-    cout << endl;
+    
 }
